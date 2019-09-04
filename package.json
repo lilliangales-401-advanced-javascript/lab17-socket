@@ -1,0 +1,24 @@
+{
+  "name": "events-lab",
+  "version": "1.0.0",
+  "description": "Events Lab",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^6.3.0",
+    "events": "^3.0.0",
+    "fs": "0.0.1-security",
+    "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  }
+}
