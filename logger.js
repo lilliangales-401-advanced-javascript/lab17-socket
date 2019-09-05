@@ -1,14 +1,16 @@
 'use strict';
 
-const events = require('./events.js');
-
-events.on('log', message => log('log', message));
+const socketIo = require('socket.io-client');
+const socket = socketIo.connect('http://localhost:3009');
 
 /**
  * Log event handler
- * @param event
- * @param message
+ * @param payload
  */
-function log(event, message){
-  console.log(message);
-}
+socket.on('file-save', payload => {
+  console.log(payload);
+})
+
+socket.on('file-error', payload => {
+  console.log(payload);
+})
